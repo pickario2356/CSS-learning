@@ -1,0 +1,10 @@
+*{
+    color:rgb(193, 56, 156)
+}
+/* this is universal selecto */
+
+button{
+    color:#06202B;
+    background-color:#7AE2CF
+}
+/* element selector */
