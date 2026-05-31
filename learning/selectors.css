@@ -8,3 +8,20 @@ button{
     background-color:#7AE2CF
 }
 /* element selector */
+
+body {
+     background-color:antiquewhite
+}
+
+#best1 {
+    color:olivedrab
+}
+#best2 {
+    color:crimson
+}
+/* ID selector */
+
+.group{
+    color:cadetblue
+}
+/* class selector */
