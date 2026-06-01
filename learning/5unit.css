@@ -1,0 +1,11 @@
+#one{
+    font-size: 16px;
+}
+/* default=16 */
+#two{
+    font-size:xx-large
+}
+#height{
+    line-height:20px;
+    text-transform:capitalize
+}

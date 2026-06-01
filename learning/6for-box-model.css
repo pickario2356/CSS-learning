@@ -1,0 +1,57 @@
+/* h1{
+    height: 50px;
+    width: 180px;
+    background-color:rgb(44, 101, 255);
+    border-style:dashed
+}
+div{
+    height: 90px;
+    width: 180px;
+    background-color:cadetblue;
+    text-align:center;
+    /* border-style:double;
+    border-width:5px;
+    border-color:aqua;
+    border-radius:10px */
+    /*border: 6px,double,pink 
+}*/
+/* sbse main border mai style hai */
+ 
+
+#first{
+    color:antiquewhite;
+    height: 80px;
+    width: 80px;
+    background-color:crimson;
+    border: 3px,dashed,orange;
+    border-radius:10px;
+    padding-left: 10px;
+    margin:10px
+}
+#second{
+    color:antiquewhite;
+    height: 80px;
+    width: 80px;
+    background-color:crimson;
+    border: 3px,dashed,orange;
+    border-radius:10px;
+    padding: 10px;
+    margin-right:10px
+}
+#third{
+    color:antiquewhite;
+    height: 80px;
+    width: 80px;
+    background-color:crimson;
+    border: 3px,dashed,orange;
+    border-radius:10px;
+    padding:5px 10px 15px 20px;
+    margin: 7px 14px 21px 2px;
+}
+
+/* padding agr andr jagah chahiye 
+margin bahr ki jagh ya gr do chizo kai bich jagah chahiye */
+
+
+
+ 
