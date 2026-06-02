@@ -1,0 +1,26 @@
+/* #practice{
+    background-color:deepskyblue;
+    display:inline
+}
+button{
+    display:block 
+}*/
+
+.boxes{
+
+    height: 100px;
+    width:100px;
+    margin: 25px;
+    padding:25px;
+    display:inline-block;
+    }
+/* jo practice wala div hai jo ab inline bn chuka hai
+uspe height kaam nhi kregi kyuki height aur width bs block pai kaam krte hai
+but inline pai padding kaam krti hai isliye antr aya aur yaha padding sai kaam nahi chala */
+/* #box2{
+    display:none
+} */
+#box2{
+    visibility:hidden
+}
+/* visibility mai space bchti hai */
