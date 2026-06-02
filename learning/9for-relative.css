@@ -1,0 +1,32 @@
+#box{
+    height:100px;
+    width:200px;
+    background-color:brown;
+    font-size: 20px;
+}
+
+/* div{
+    height:50px;
+    width:60%;
+    background-color:yellow;
+    padding: 10%;
+    font-size: 2em;
+    width: 5em;
+} */
+  
+/* margin aur padding dono width sai calculate hote hai */
+/* 1em=same as parent,ur widtht mai xen jo hai wo 
+child text kai font sai multiply hoga,mtlb width em sai child sai related hai*/
+/* height aur width mai mai 40 ka add hai cuz padding yaha 10% off width jo 200 hai to
+mtlb dono side 20 20 ka add */
+
+div{
+    height:50px;
+    background-color:yellow;
+    font-size: 2em;
+    width: 8rem;
+    height:50vh
+
+}
+/* rem mai bss html kai basis pai,cuz yaha 16 tha toh 8*16 128 hua */
+/* vh/wh(viewport height/width) hota hai pne screen kai basis pi,mene 50 lia hai to screen ki 50 */
