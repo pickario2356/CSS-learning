@@ -1,0 +1,36 @@
+div{
+    height: 100px;
+    width:100px;
+    border:2px solid black;
+    display:inline-block
+}
+
+#box1{
+    position:static;
+    top:20px
+}
+#box2{
+    position:relative;
+    top:20px;
+    left:55px;
+    z-index:1
+}
+#box3{
+    position:absolute;
+    top:80px;
+    left:10px;
+    z-index:1
+}
+/* absolute mai parent ki acc change aata hai yaha parent body tag hai to usse hai */
+#box4{
+    position:fixed;
+    top:0px;
+    left:0px
+}
+/* fixed mai browser kai hisab sai hota hai */
+#box5{
+    position:sticky;
+    top:10px;
+    left:10px;
+    
+}
