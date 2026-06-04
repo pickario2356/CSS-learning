@@ -1,0 +1,23 @@
+div{
+    height: 100px;
+    width:100px;
+    border:2px solid black;
+    display:inline-block
+    
+}
+#box1{
+    background-image: url("/images/cat.jpg");
+    background-size:cover
+}
+
+#box2{
+    background-image:url("/images/cat.jpg");
+    background-size:contain;
+    background-repeat:no-repeat
+    /* no repeat if no need */
+}
+#box4{
+    background-image:url("/images/cat.jpg");
+    background-size:auto
+    /* auto mai size bohot badi ya choti hoti hai */
+}
