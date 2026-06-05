@@ -1,0 +1,53 @@
+body{
+    text-align:center
+}
+/* #container{
+    height:90vh;
+    width:700px;
+    display:flex; 
+    justify-content:center;     for align-self
+    flex-wrap:wrap;
+} */
+/* #container{
+    height:500px;
+    width:700px;
+    display:flex;          for shrink
+    justify-content:center;} */
+#container{
+    height:500px;
+    width:1200px;
+    display:flex;          
+    justify-content:center;}
+
+div{
+    border: 2px solid black;
+    border-radius:10px;
+    display:inline-block;
+    height:100px;
+    width:100px;
+}
+
+#box1{                                                                  
+    background-color:aqua
+}
+#box2{
+    background-color:#FFAE6E;
+    /* flex-shrink:6 */
+}
+#box3{
+    background-color:#24B1B1;
+    flex-grow:1
+}
+#box4{
+    background-color:#7F2020;
+}
+#box5{
+    background-color:#BBD5DA;
+} 
+
+/* #box5{
+    background-color:#BBD5DA;
+    align-self:flex-end
+} */
+
+/* content extra space hta deta hai isliye self kai liye align content htan */

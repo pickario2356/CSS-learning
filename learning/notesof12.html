@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>flexbox</h1>
+    <p>/* ================================
+   FLEXBOX CHEATSHEET
+   ================================
+    <!-- ID (#container) > Class (.box) > Element (div) 
+      100 points       10 points      1 point -->
+
+   CONTAINER PE LAGTI HAIN:
+   ------------------------
+   display: flex;
+   → flexbox shuru karo
+
+   flex-direction: row / column;
+   → row = horizontal, column = vertical
+
+   justify-content: center / space-between / space-evenly / flex-start / flex-end;
+   → x-axis pe align karo
+   → center = beech mai, space-between = kinaro pe, space-evenly = equal space
+
+   align-items: center / flex-start / flex-end / stretch;
+   → y-axis pe align karo (ek line)
+   → center = beech mai, flex-start = upar, flex-end = niche
+
+   align-content: center / space-between / space-evenly;
+   → y-axis pe align karo (saari lines ek saath)
+   → wrap hone ke baad use karo
+
+   flex-wrap: wrap / nowrap;
+   → wrap = nai line banana, nowrap = sab ek line mai
+
+    <!-- wrap se alag alag lines banti hain, aur har line ki 
+    height sirf us line ke boxes jitni hoti hai!
+    
+    /* Wrap ke saath:
+Container split ho jaati hai lines mein!
+
+Line 1: [box1][box2][box3]  ← sirf 100px space
+Line 2: [box4][box5]        ← sirf 100px space */ -->
+<h2>extra</h2>
+align-items = particular items (line by line)
+   align-content = overall content (sab ek saath) 
+
+
+items — har ek item ko uski line mein center karo
+line 1: [box1] [box2] [box3]  ← inhe center karo
+line 2: [box4] [box5]         ← inhe center karo
+Har line alag alag handle hoti hai.
+
+   content — saari lines ko ek saath center karo
+[box1] [box2] [box3]
+[box4] [box5] 
+
+
+   gap: 10px;
+   → boxes ke beech space
+
+   ================================
+   BOX PE LAGTI HAIN:
+   ------------------
+   order: 0 / 1 / -1;
+   → box ki position badlo
+   → chhota number = pehle, bada number = baad mai
+
+   align-self: center / flex-start / flex-end;
+   → sirf us ek box ko alag align karo
+   → align-items ko override karta hai
+
+   flex-grow: 1 / 2;
+   → box ko extra space do
+   → bada number = zyada space
+
+   ================================
+   YAAD RAKHNE KI TRICK:
+   ---------------------
+   justify-content = horizontal (x-axis)
+   align-items     = vertical   (y-axis)
+   align-content   = wrap ke baad use karo
+   ================================ */</p>
+<HR>
+   <P>* Wrap ke saath:
+Container split ho jaati hai lines mein!
+
+Line 1: [box1][box2][box3]  ← sirf 100px space
+Line 2: [box4][box5]        ← sirf 100px space</P>
+<p>wrap sai space mila hai content sai nikal jata hai spce
+    align center  > container
+</p>
+</body>
+</html>

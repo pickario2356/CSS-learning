@@ -1,0 +1,77 @@
+body{
+    text-align:center
+}
+/*#container{
+    height:90vh;
+    width:700px;
+    display:flex;  /* always */
+    /*flex-direction:row;} */        /*For direction*/
+
+/* #container{
+    height:90vh;
+    width:700px;
+    display:flex; 
+    justify-content:space-evenly;}  */
+    /* change in x axis  */
+
+ /* #container{
+    height:90vh;
+    width:700px;
+    display:flex;
+    align-items:center}  */ /* change in y axis  */
+#container{
+    height:90vh;
+    width:700px;
+    display:flex; 
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    align-content: flex-end; 
+}
+/* content mai gap nhi bnta cuz wo ek sb ko ek hi man leta */
+
+
+
+/* order mai Chhota number = pehle aayega
+             Bada number = baad mein aayega 
+default 0 hota hai*/
+
+div{
+    border: 2px solid black;
+    border-radius:10px;
+    display:inline-block;
+    height:100px;
+    width:100px;
+}
+
+#box1{
+    background-color:aqua
+}
+#box2{
+    background-color:#FFAE6E;
+  width:400px
+}
+#box3{
+    background-color:#24B1B1;
+    
+}
+#box4{
+    background-color:#7F2020;
+}
+#box5{
+    background-color:#BBD5DA;
+    
+
+}
+
+/* align-items = particular items (line by line)
+   align-content = overall content (sab ek saath) */
+
+
+/* items — har ek item ko uski line mein center karo
+line 1: [box1] [box2] [box3]  ← inhe center karo
+line 2: [box4] [box5]         ← inhe center karo
+Har line alag alag handle hoti hai.
+
+   content — saari lines ko ek saath center karo
+[box1] [box2] [box3]
+[box4] [box5] */
