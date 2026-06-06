@@ -1,0 +1,21 @@
+div{
+    height:100px;
+    width:100px;
+    background-color:#2C5EAD;
+    border:2px solid black;
+    /* transition-property:all;
+    transition-duration:1s;
+    transition-timing-function:ease-in;
+    transition-delay:1s; */
+    transition:all 1s ease-in 1s
+}
+div:hover{
+    background-color:#8CC0EB;
+    color:white;
+    font-size:19px;
+}
+div:active{
+    background-color:#FFEBCC;
+    color:black;
+    font-size:16px
+}
