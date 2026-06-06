@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ╔══════════════════════════════════════════════════════╗
+║           CSS SHORTHAND NOTES — Quick Ref            ║
+╚══════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. MARGIN  →  Element ke BAAHIR ka space
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Syntax:  margin: top  right  bottom  left;
+  Example: margin: 10px 20px  30px   40px;
+
+  Order: Clockwise  →  Top → Right → Bottom → Left
+
+  Shortcut forms:
+  ┌─────────────────────────────────────────────────┐
+  │ margin: 10px;              → charo taraf same   │
+  │ margin: 10px 20px;         → TB=10  LR=20       │
+  │ margin: 10px 20px 30px;    → T=10 LR=20 B=30    │
+  │ margin: 10px 20px 30px 40px; → T R B L alag     │
+  └─────────────────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  2. PADDING  →  Element ke ANDAR ka space
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Syntax:  padding: top  right  bottom  left;
+  Example: padding: 10px 20px  30px   40px;
+
+  [ Same shortcut forms jaise margin — bilkul same! ]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  3. BORDER  →  Element ki line/rekha
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Syntax:  border: width   style   color;
+  Example: border: 2px     solid   red;
+
+  width  → line kitni moti  →  2px, 5px
+  style  → line kaisi ho    →  solid, dashed, dotted
+  color  → line ka rang     →  red, blue, #333
+
+  ⚠ Teeno mandatory hain! Koi chhoota = border nahi dikhega
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  4. FONT  →  Text ki appearance
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Syntax:  font: style  weight  size/line-height  family;
+  Example: font: italic bold   16px/1.5          Arial;
+
+  style        → seedha ya tircha   → normal, italic
+  weight       → patla ya mota      → normal, bold, 700
+  size         → text kitna bada    → 16px, 1.2rem
+  line-height  → lines ke beech gap → 1.5, 2
+  family       → kaunsa font        → Arial, Georgia
+
+  ⚠ size aur family mandatory hain, baaki optional!
+  ✓ Minimum: font: 16px Arial;
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  5. BACKGROUND  →  Peeche ki setting
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Syntax:  background: color  image         repeat     position;
+  Example: background: red   url('bg.png') no-repeat  center;
+
+  color     → background rang        → red, #fff
+  image     → background tasveer     → url('bg.png')
+  repeat    → image repeat ho ya na  → repeat, no-repeat
+  position  → image kahan dikhegi    → center, top, left
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  6. LIST-STYLE  →  Bullet ki setting
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Syntax:  list-style: type    position  image;
+  Example: list-style: square  inside    none;
+
+  type      → bullet kaisa ho       → disc, square, decimal
+  position  → bullet andar ya bahar → inside, outside
+  image     → custom image bullet   → url('dot.png'), none
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  QUICK SUMMARY TABLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Shorthand    │ Order
+  ─────────────┼──────────────────────────────────
+  margin       │ Top → Right → Bottom → Left
+  padding      │ Top → Right → Bottom → Left
+  border       │ Width → Style → Color
+  font         │ Style → Weight → Size/LH → Family
+  background   │ Color → Image → Repeat → Position
+  list-style   │ Type → Position → Image
+
+══════════════════════════════════════════════════════
+</body>
+</html>
