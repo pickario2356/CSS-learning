@@ -1,0 +1,43 @@
+div{
+    height:200px;
+    width:200px;
+    background-color:#869B7E;
+    border:2px solid black;
+    border-radius:20px;
+    position:absolute;
+    top:100px;
+    left:0px;
+    /* animation-name:coloranimate;
+    animation-duration:1s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: 4;
+    animation-direction:alternate */
+    animation: coloranimate 2s ease-in-out 2 alternate
+}
+
+@keyframes coloranimate {
+    /* from { 
+        left:0px ;
+        background-color : #869B7E;
+    }
+    to {
+        left: 200px;
+        background-color : #7F2020;
+} */
+     0%{ 
+        left:0px ;
+        background-color : #869B7E;
+    }
+    50%{
+        background-color : #FF653F;
+        left:200px ;
+    }
+    100% {
+        left: 0px;
+        background-color : #7F2020;
+}
+}
+/* animation: name duration timing-function delay iteration-count direction;
+/*           ↑      ↑          ↑            ↑         ↑            ↑
+            naam  kitni    ease/linear   kitni    infinite/     alternate/
+                  der tak               baad     number        normal    */ 
