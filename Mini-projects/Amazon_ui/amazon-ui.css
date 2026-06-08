@@ -1,0 +1,151 @@
+*{
+    margin :0;
+    font-family:Arial, Helvetica, sans-serif;
+    border:border-box;
+}
+.navbar{
+    height:60px;
+    background-color:#131921;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+  
+}
+
+.nav_logo{
+    height: 50px;
+    width:110px; 
+}
+
+.logo{
+    background-image: url(/images/amazon_logo.png);
+    height: 50px;
+    width: 100%;
+    background-size:cover;
+}
+.border{
+    border:1px solid transparent;
+}
+.border:hover{
+    border:1px solid white;
+}
+.logo:hover{
+    background-size:113px;
+    background-repeat:no-repeat
+}
+/* box2 */
+.add-first{
+    font-size: 0.8em;
+    color:#cccccc;
+    margin-left:15px;
+}
+.add-second{
+    font-size: 1em;
+    margin-left:3px;
+}
+.add-icon{
+    display:flex;
+    align-items:center;
+}
+/* box3 */
+.nav_search{
+    display:flex;
+    justify-content:space-evenly;
+    background-color:pink;
+    height:40px;
+    width:60%;
+    border-radius:5px;
+}
+.nav_search:hover{
+    border:2px solid orange;
+}
+.search_select{
+    background-color:#f3f3f3;
+    width:50px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    border:none;
+
+}
+.search_place{
+    width:100%;
+    border:none;
+    font-size:1rem;
+}
+.search_icon{
+    width:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.2rem;
+    background-color:orange;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    color:#131921
+}
+/* box 4 */
+.span{
+    font-size: 0.70rem;
+}
+.nav-second{
+    font-size:0.9rem;
+    font-weight:bold
+}
+/* box 5 */
+.nav_cart i{
+    font-size:30px;
+}
+.nav_cart{
+    font-size:0.85rem;
+    font-weight:700
+}
+/* Menu */
+.nav_panel {
+    background-color:#232F3E;
+    height:39px;
+    width:100%;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+  
+}
+.menu_ops p{
+    display:inline;
+    margin-left:15px;
+    
+}
+
+.menu_ops{
+    width:70%;
+    font-size:0.85rem;
+    font-weight:bold;
+}
+.deals{
+    font-size:0.rem;
+    font-weight:bold;
+}
+/* Hero image */
+.hero_section{
+    background-image:url(/images/hero_image2.jpg);
+    height: 600px;
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    
+}
+.hero_msg{
+    height:40px;
+    width:95%;
+    color:black;
+    background-color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:300px;
+}
+.blur_click{
+    color:#2162a1
+}
