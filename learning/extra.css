@@ -1,0 +1,69 @@
+body{
+    background-color:black
+}
+.box-shadow{
+    height:400px;
+    width:400px;
+    font-size:4rem;
+    position: relative;
+    margin:20px;
+    background:linear-gradient(to left,blue 40%,purple 100%);
+    border-radius: 40px;
+    filter:opacity(0.6) ;
+    
+    
+}
+/* gradient % tells ki kite % pai ye stop hona chahiye ex koi 100 hai to wo nhi ayega cuz wo 100 pai hi khtm 
+linear — seedhi line mein ek side se doosri side
+radial — center se bahar ki taraf circle mein*/
+.glow{
+    text-shadow: 0 0 20px rgb(255, 255, 255);
+    /*     text-shadow: 0 0 20px rgb(229, 255, 0),
+                        0 0 20px rgb(229, 255, 0),
+                        0 0 20px rgb(229, 255, 0),
+                        0 0 20px rgb(229, 255, 0); */
+    text-align: center;
+    color:white;
+}
+/* width:300px;
+height:300px;
+border-radius:50%;
+filter:blur(100px); */
+.back-shadow{
+    height:400px;
+    width:400px;
+    font-size:4rem;
+    position: relative;
+    margin:100px;
+    margin-top:400px;
+    background:linear-gradient(to left,blue 40%,purple 100%);
+    border-radius: 40px;
+    box-shadow:0 0 25px purple,
+    0 0 55px purple,
+    0 0 255px purple;
+    filter:opacity(0.6) ;
+}
+.text-gradient{
+    text-align: center;
+    font-size: larger;
+    background: linear-gradient(to left, red , yellow);
+    background-clip: text;
+    color: transparent;
+    
+}
+.glass{
+    height:200px;
+    width: 200px;
+    position:fixed;
+    top:0px;
+    left:50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+/* backdrop-filter — element ke peeche wali cheez pe filter lagata hai. */
+/* background: color image repeat position/size attachment; */
+html{
+    scroll-behavior: smooth;
+}
