@@ -1,0 +1,142 @@
+:root{
+    --body-color:#0d1b2a;
+    --bg-color: #414d62;
+    --h-color:white;
+    --txt-color:rgb(203, 203, 203);
+}
+
+body{
+    background-color: var(--body-color);
+    display: flex;
+    height:1000px;
+    flex-direction: column;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.heading{
+    color: var(--h-color)
+}
+.lorem{
+    color:var(--txt-color)
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.cards{
+    padding:2em;
+    margin-top: 100px;
+    height: 200px;
+    width:300px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+.cards::after, .cards::before{
+    content:'';
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-image:conic-gradient(from var(--angle),red,blue,rgb(0, 179, 255),purple,red);
+    border-radius:10px;
+    z-index: -1;
+    padding: 4px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    animation: 5s spin linear infinite;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    
+}
+.cards::before{
+    filter:blur(1.5rem);
+    
+}
+
+.cards:hover:after,.cards:hover::before{
+    opacity: 1;
+}
+
+/* second */
+
+.cards2{
+    padding:2em;
+    margin-top: 100px;
+    height: 200px;
+    width:300px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+.cards2::after , .cards2::before{
+    content:'';
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-image:conic-gradient(from var(--angle),transparent 50%,blue);
+    border-radius:10px;
+    z-index: -1;
+    padding: 4px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%)
+}
+.cards2::before{
+    filter:blur(1.5rem);
+}
+
+
+.cards2::after,.cards2::before{
+    opacity: 0;
+}
+
+.cards2:hover::after,.cards2:hover::before{
+    opacity: 1;
+    animation: 4s spin linear infinite;
+}
+
+@keyframes spin{
+    from{
+        --angle:0deg
+    }
+    to{
+        --angle:360deg
+    }
+}
+/* dropdown */
+.menu{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #222;
+    min-width: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown a{
+    display: block;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.dropdown a:hover{
+    background: #444;
+}
+
+.menu:hover .dropdown{
+    display: block;
+}
+
+ek last chiz aur bta do bhagwan tujhe jaldi emoions aur feelings dega ki ye jese claude kai code mai tha like 
