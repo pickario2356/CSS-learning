@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* box-sizing: border-box;=Yeh kya karta hai — padding ko width ke andar count karta hai, bahar nahi jaata. Toh width: 100% matlab
+ exactly 100%, padding include karke. */
+
+:root{
+    --bg-color:#0b0b0f;
+    --prime-text:#6B6B80;
+    --sec--text:rgb(168, 85, 247);
+    --ter-text:rgb(162, 81, 246);
+    --border-color: rgba(107, 107, 176, 0.15);
+    --h-color:rgb(225, 220, 240);
+    --hover-border:rgba(168, 85, 247,0.15);
+
+}
+/* Navbar */
+.nav-bar{
+    height:70px;
+    width:100%;
+    padding: 18px 60px;
+    background-color:var(--bg-color);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: fixed;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 100;
+
+}
+
+.nav-logo{
+    font-size:20px;
+    font-weight:700 ;
+    color:var(--ter-text);
+    letter-spacing: 2px;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    gap:35px;
+    color:var(--prime-text);
+}
+.nav-list a{
+    text-decoration: none;
+    color:inherit;
+    display: inline-block;
+    transition:color 0.3s ease,transform 0.3s ease;
+}
+/* inherit matlab parent ka color le lega yaha iska parent nav-list
+inline elements pe transform kaam nahi */
+.nav-list a:hover{
+    color:var(--sec--text);
+    transform: translateY(-3px);
+}
+.dropdown{
+    position:relative;
+}
+.dropdown-menu{
+    position: absolute;
+    top:100%;
+    left:0%;
+    list-style: none;
+    border: 1px solid rgba(132, 0, 255, 0.15);
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hero section */
+.hero-section{
+    height: 742px;
+    width:100%;
+    padding: 100px 20px 60px;
+    background-color: var(--bg-color);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero-section >*{
+    display: relative;
+    z-index: 1;
+}
+.hero-section::before{
+    content: '';
+    position: absolute;
+    height:600px;
+    width:600px;
+    background:radial-gradient( circle,rgba(123, 0, 255, 0.142) 0%, transparent 70%);
+    top:50%;
+    left:50%;
+    transform: translate(-50% , -50%);
+    z-index: 0;
+}
+.hero-tag{
+    border: 1px solid rgba(168, 85, 247,0.15);
+    text-align: center;
+    background-color: rgb(34, 21, 61);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color:var(--ter-text);
+    border-radius:50px;
+    padding:6px 16px;
+    margin-bottom:28px ;
+    
+}
+.hero-main{
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    color:var(--h-color);
+    line-height: 1.1;
+}
+.hero-main h1{
+    font-size:4rem;
+    font-weight:900;
+}
+.hero-main h1 span{
+    background:linear-gradient(135deg, #7c3aed, #a855f7);
+    background-clip: text;
+    color: transparent;
+}
+/* background — gradient define karo
+background-clip: text — gradient sirf text ke shape mein clip ho jaata hai
+text-fill-color: transparent — text transparent kar do taaki background gradient dikhe */
+
+.hero-text{
+    color:var(--prime-text);
+    font-size:1.1rem;
+    text-align:center;
+    margin-bottom:40px
+}
+.hero-btns{
+    display: flex;
+    gap:15px;
+}
+.prime-btn{
+    background-color:rgb(132, 63, 239);
+    padding:13px 30px;
+    border-radius: 10px;
+    color:white;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+.prime-btn:hover{
+    transform: translateY(-5px)
+}
+.sec-btn{
+    background-color:transparent;
+    padding:13px 30px;
+    border:1px solid var(--border-color);
+    border-radius: 10px;
+    color:white;
+    text-decoration: none;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+.sec-btn:hover{
+    border-color: var(--sec--text);
+    transform: translateY(-5px);
+}
