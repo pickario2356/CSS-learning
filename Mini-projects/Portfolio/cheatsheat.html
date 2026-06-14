@@ -22,3 +22,233 @@ a	                inline
 strong	            inline
 b	                inline
 img	                inline
+
+
+<!-- child selectorrr -->
+.nav-list > li > a:hover {
+  transform: translateY(-3px);
+}
+Iska matlab:
+
+.nav-list > li → sirf woh <li> jo directly .nav-list ke andar hain (About, Skills, Projects, Contact)
+> a → us <li> ke directly andar wala <a>
+<!-- poolio dopdown -->
+ # CSS Dropdown Notes
+## 1. position: relative + absolute
+
+```css
+.dropdown{
+    position: relative;
+}
+
+.dropdown-menu1{
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+```
+
+* `relative` = parent reference point ban jata hai.
+* `absolute` = child parent ke according position leta hai.
+
+---
+
+## 2. Hide and Show Dropdown
+
+```css
+opacity: 0;
+visibility: hidden;
+```
+
+* `opacity: 0` → invisible
+* `visibility: hidden` → clickable bhi nahi
+
+Show:
+
+```css
+.dropdown:hover .dropdown-menu1{
+    opacity: 1;
+    visibility: visible;
+}
+```
+
+---
+
+## 3. Parent Hover Logic
+
+```css
+.dropdown:hover .dropdown-menu1
+```
+
+Meaning:
+
+> Jab `.dropdown` hover ho, tab uske andar ki `.dropdown-menu1` par styles lagao.
+
+Reason:
+
+* Hidden element par hover nahi hota.
+* Mouse child par ho to parent bhi hovered mana jata hai.
+
+---
+
+## 4. Smooth Animation
+
+Transition hamesha normal state par lagti hai:
+
+```css
+transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+```
+
+Changed property hover state par:
+
+```css
+transform: translateY(0);
+```
+
+---
+
+## 5. Professional Dropdown Animation
+
+Hidden state:
+
+```css
+transform: translateY(8px);
+```
+
+Visible state:
+
+```css
+transform: translateY(0);
+```
+
+Animation:
+
+```text
+8px → 0px
+```
+
+Menu neeche se smoothly appear hota hai.
+
+---
+
+## 6. Glassmorphism
+
+```css
+background: rgba(255,255,255,0.1);
+backdrop-filter: blur(5px);
+border: 1px solid rgba(...);
+```
+
+* `rgba()` → transparency
+* `backdrop-filter` → background blur
+* `border` → glass edge
+
+---
+
+## 7. width: max-content
+
+```css
+width: max-content;
+```
+
+Element utni hi width leta hai jitni content ko chahiye.
+
+---
+
+## 8. Child Selector
+
+```css
+.parent > a
+```
+
+Sirf direct child select karta hai.
+
+```css
+.parent a
+```
+
+Saare descendants select karta hai.
+
+---
+
+## 9. Anchor Animation
+
+```css
+display: block;
+transition: transform 0.5s ease;
+```
+
+Hover:
+
+```css
+transform: translateX(3px);
+```
+
+Links smoothly move karte hain.
+
+
+
+
+<!-- ================= CSS NOTE: SECTION VS CONTAINER ================= -->
+
+Problem:
+Sides me white space aa rahi thi aur layout reference jaisa nahi lag raha tha.
+
+
+Galti:
+Maine section (.about) par hi max-width laga di.
+Isse poora section chhota ho gaya aur side ka background dikhne laga.
+
+
+/*
+.about{
+    width: 100%;
+    max-width: 1100px; ❌
+    margin: 0 auto;
+}
+*/
+
+<!-- Sahi Approach:
+Section full width hota hai.
+Container limited width hota hai.
+-->
+
+/*
+.about{
+    width: 100%;
+    background-color: var(--bg-color);
+    padding: 90px 0;
+}
+
+.about-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+*/
+
+<!-- HTML Structure -->
+
+<section class="about">
+    <div class="about-container">
+        <p class="who">WHO I AM</p>
+    </div>
+</section>
+
+<!-- Key Points:
+
+1. Section = Full Width
+2. Container = Limited Width
+3. margin: 0 auto → center karta hai
+4. padding: 0 20px → mobile par side gap deta hai
+
+Golden Rule:
+"Background section ka hota hai, content container ka hota hai."
+-->
+
+<!-- Personal Note:
+Is concept me expected se zyada time laga.
+Reason: CSS me coding se zyada layout thinking important hoti hai.
+-->
