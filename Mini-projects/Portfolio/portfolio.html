@@ -12,9 +12,9 @@
     <nav class="nav-bar">
         <div class="nav-logo">Priyanshu</div>
         <ul class="nav-list">
-            <li><a href="#">About</a></li>
+            <li><a href="#about">About</a></li>
             <li class="dropdown">
-                <a href="#">Skills</a>
+                <a href="#skills">Skills</a>
                 <ul class="dropdown-menu1">
                     <li><a href="#">HTML</a></li>
                     <li><a href="#">CSS</a></li>
@@ -23,14 +23,14 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#">Projects</a>
+                <a href="#projects">Projects</a>
                 <ul class="dropdown-menu1">
-                    <li><a href="#">Amazon</a></li>
+                    <li><a href="#">Amazon Ui clone</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Learn coding website</a></li>
                 </ul>
             </li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <div class="hero-section">
@@ -44,9 +44,9 @@
                 <a href="#" class="sec-btn">Get in touch</a>
             </div>
         </div>
-    </div>
 
-    <div class="about">
+   <section id="about" class="about">
+        
         <div class="about-content">
             <p class="who">WHO I AM</p>
             <h1 class="about-me">About Me</h1>
@@ -63,34 +63,37 @@
                     <p>I learn best by building. Every project teaches me something new — from Flexbox layouts to CSS positioning tricks.</p>
                 </div>
             </div>
-            </div>
-          
-        <div class="skills">
+            </section>
+</section> 
+
+        <section id="skills" class="skills">
             <div class="skills-item">
                 <p>WHAT I KNOW</p>
                 <h1 class="itm-h">Skills</h1>
                 <div class="grid-container">
-                    <div class="items">HTML5</div>
-                    <div class="items">CSS3</div>
-                    <div class="items">Flexbox</div>
-                    <div class="items">CSS Animation</div>
-                    <div class="items">Responsive Design</div>
-                    <div class="items">Python</div>
-                    <div class="items">GitHub</div>
-                    <div class="items">VS Code</div>
+                    <div class="items"><i class="fa-brands fa-html5"></i> HTML5</div>
+                    <div class="items"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+                    <div class="items"><i class="fa-brands fa-css3"></i> Flexbox</div>
+                    <div class="items"><i class="fa-solid fa-film"></i>CSS Animation </div>
+                    <div class="items"><i class="fa-solid fa-mobile-screen"></i> Responsive Design</div>
+                    <div class="items"><i class="fa-brands fa-python"></i>Python </div>
+                    <div class="items"><i class="fa-brands fa-github"></i> GitHub</div>
+                    <div class="items"><i class="fa-solid fa-code"></i> VS Code</div>
                 </div>
             </div>
-            </div>
-        
-        <div class="projects">
+            </section>
+</section>
+
+    <section id="projects" class="projects">
             <div class="projects-item">
             <p>WHAT I'VE BUILT</p>
             <h1 class="pro">Projects</h1>
+            <div class="cont">
             <div class="clone">
                     <h2 class="ui">Amazon Ui Clone</h2>
                     <div class="clone-txt">
                          <p>A pixel-perfect clone of Amazon's homepage — navbar, hero section, product cards grid, and footer. Built with pure HTML & CSS.</p>
-                         <i class="fa-brands fa-github"></i>
+                         <a href="https://github.com/pickario2356?tab=repositories" target="_blank" ><i class="fa-brands fa-github"></i></a>
                     </div>
                 <div class="pro-tags">
                     <span>HTML</span>
@@ -98,9 +101,52 @@
                     <span>Flexbox</span>
                 </div>
             </div>
+            <div class="clone">
+                    <h2 class="ui">Learn Coding Website</h2>
+                    <div class="clone-txt">
+                         <p>A multi-page website with signup, qualification, and courses pages. Built while learning HTML fundamentals.</p>
+                         <a href="https://github.com/pickario2356?tab=repositories" target="_blank" ><i class="fa-brands fa-github"></i></a>
+                    </div>
+                <div class="pro-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Flexbox</span>
+                </div>
+            </div>
+            </div>
+            </div>
+</section> 
+<section id="talk" class="talk">
+            <div class="class-content">
+                <p>LET'S TALK</p>
+                <div class="touch">
+                    <h1>Get in Touch</h1>
+                </div>
+                <div class="contact-grid">
+                        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" class="contact-card">
+                            <i class="fa-solid fa-envelope"></i>
+                        
+                            <div class="contact-mail">
+                                <h3>Email</h3>
+                                <p>pickario2356@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/pickario2356?tab=repositories" target="_blank" class="contact-card">
+                            <i class="fa-brands fa-github"></i>
+                        
+                            <div class="contact-git">
+                                <h3>GitHub</h3>
+                                <p>pickario2356</p>
+                            </div>
+                        </a>
+                </div>
 
             </div>
-        </div>
-     
+</section> 
+    <footer>
+        Built with 
+        <div class="heart">♥</div>
+         by Prince — 2026
+    </footer>
 </body>
 </html>

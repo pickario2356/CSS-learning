@@ -7,8 +7,9 @@
 }
 /* box-sizing: border-box;=Yeh kya karta hai — padding ko width ke andar count karta hai, bahar nahi jaata. Toh width: 100% matlab
  exactly 100%, padding include karke. */
-html{
+html,body{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 :root{
     --bg-color:rgb(11, 11, 15);
@@ -236,7 +237,7 @@ text-fill-color: transparent — text transparent kar do taaki background gradie
 }
 
 .about-me{
-    color:white;
+    color:var(--h-color);
     font-size: 35.2px;
     margin-bottom: 50px;
     position: relative;
@@ -253,7 +254,7 @@ text-fill-color: transparent — text transparent kar do taaki background gradie
     bottom:-2px;
     left: 0px;
     scale: 0;
-    transition: scale 0.5s ease 0.2s;
+    transition: scale 0.3s ease 0.2s;
 }
 .about-me:hover::after{
     scale: 1;
@@ -292,7 +293,7 @@ text-fill-color: transparent — text transparent kar do taaki background gradie
 .skills{
     width:100%;
     padding: 90px 0px 90px 0px;
-    color:white;
+    color:var(--h-color);
     background-color: rgb(22, 22, 31);
 }
 .skills-item{
@@ -300,6 +301,7 @@ text-fill-color: transparent — text transparent kar do taaki background gradie
     margin:0 auto;
     padding: 0 60px;
 }
+
 .skills-item p{
     color:var(--sec--text);
     font-size:12px;
@@ -324,14 +326,14 @@ text-fill-color: transparent — text transparent kar do taaki background gradie
     box-shadow: 0 0 20px;
 
     scale: 0;
-    transition: scale 0.5s ease 0.2s;
+    transition: scale 0.3s ease 0.2s;
 }
 .itm-h:hover::after{
     scale:1;
 }
 .grid-container{
     display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap:20px;
 }
 .items{
@@ -340,27 +342,35 @@ text-fill-color: transparent — text transparent kar do taaki background gradie
     display: flex;
     align-items: center;
     justify-content: center;
-
+    white-space: nowrap; 
     padding: 0.8em;
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
-
+    gap:0.5rem;
     font-size: 14px;
     text-align: center;
     transition: color 0.5s ease 0.1s,
                 border 0.5s ease 0.1s;
 }
+/* white-space: nowrap ka matlab hai — text ko ek hi line mein rakho, wrap mat karo. */
 .items:hover{
-    color:var(--sec--text);
-    border:2px solid var(--ter-text)
+    border: 1px solid var(--ter-text);
+    color: var(--sec--text);
 }
-
+.items i {
+    font-size: 1.5rem;
+    color: var(--sec--text);
+}
 /* Projects */
 
 .projects{
     padding:90px 0;
     background-color:var(--bg-color);
-    color: white;
+    color: var(--h-color);
+}
+.cont{
+    display: grid;
+    gap:24px;
 }
 .projects-item{
     padding: 0 60px;
@@ -375,12 +385,40 @@ text-fill-color: transparent — text transparent kar do taaki background gradie
 }
 .pro{
     margin-bottom: 50px;
+    position: relative;
+    width:max-content
+}
+.pro::after{
+    content:'';
+    position: absolute;
+    height:3px;
+    width:100%;
+    background-color: var(--ter-text);
+    border-radius: 5px;
+    bottom:-2px;
+    left:0;
+    box-shadow: 0 0 10px ;
+    scale:0;
+
+    transition: scale 0.3s ease 0.1s;
+}
+.pro:hover::after{
+    scale:1;
+
 }
 .clone{
     padding:30px;
     background-color: rgb(22, 22, 31);
     border-radius: 20px;
-
+    border:1px solid var(--border-color);
+    line-height: 1.6;
+    transition:
+    border 0.2s ease , 
+    transform 0.2s ease ;
+}
+.clone:hover{
+    border: 1px solid var(--sec--text);
+    transform: translatex(10px);
 }
 .ui{
     font-size: 1.15em;
@@ -391,13 +429,20 @@ text-fill-color: transparent — text transparent kar do taaki background gradie
     display: flex;
     gap: 30px ;
     color:rgb(90, 90, 105) ;
+    justify-content: space-between;
+    align-items: center;
 }
-.clone-content p{
-    color:#6B6B80
+.clone-txt p{
+    max-width: 500px;
 }
 .fa-github{
     font-size: 1.5rem;
     cursor: pointer;
+    transition:color 0.2s ease;
+    color:#6B6B80;
+}
+.fa-github:hover{
+    color:var(--sec--text)
 }
 .pro-tags{
     margin-top:14px;
@@ -405,4 +450,114 @@ text-fill-color: transparent — text transparent kar do taaki background gradie
     flex-wrap: wrap;
     gap:8px;
 }
-.pro-
+.pro-tags span{
+    padding:3px 10px;
+    background-color: rgba(168, 85, 247, 0.15);
+    color: var(--sec--text);   
+    border-radius: 5px;
+}
+.talk{
+    background-color: rgb(22, 22, 31);
+    width:100%;
+    color: white;
+    padding:90px 0px;
+}
+.class-content{
+    padding:0 60px;
+    margin:0 auto;
+    max-width:1100px;
+}
+.class-content>p{
+    letter-spacing:3px;
+    color: var(--sec--text);
+    line-height: 1.6rem;
+    margin-bottom: 12px;
+}
+.touch{
+    color: var(--h-color);
+    margin-bottom: 50px;
+    display: inline-block;
+    position:relative;
+}
+.touch::after{
+    content:'';
+    position:absolute;
+    height:3px;
+    width:100%;
+    left:0px;
+    bottom:0px;
+    background-color: var(--ter-text);
+    box-shadow: 0 0 10px ;
+    scale:0;
+    transition:scale 0.3s ease 0.1s; 
+}
+.touch:hover::after{
+    scale: 1;
+}
+.contact-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+.contact-card{
+    min-width: 10px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 28px 35px;
+    background: rgba(72, 72, 102, 0.307);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+
+    text-decoration: none;
+    color: white;
+}
+footer{
+    display: flex;
+    gap:5px;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    background-color: var(--bg-color);
+    color:var(--prime-text)
+}
+.heart{
+    color: var(--sec--text);
+}
+@media (max-width: 768px){
+
+    .nav-bar{
+        padding: 18px 20px;
+    }
+
+    .nav-list{
+        gap: 15px;
+    }
+
+    .hero-main h1{
+        font-size: 2.5rem;
+    }
+
+    .about-context{
+        flex-direction: column;
+    }
+
+    .about-content,
+    .skills-item,
+    .projects-item,
+    .class-content{
+        padding: 0 20px;
+    }
+     .hero-btns{
+        flex-direction: column;
+        width:100%;
+        text-align: center;
+    }
+
+    .hero-text br{
+        display:none;
+    }
+    
+
+}
