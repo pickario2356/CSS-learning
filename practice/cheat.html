@@ -1,0 +1,478 @@
+CSS Notes: min(), max(), clamp() + Best Units
+1. min()
+Kaam:
+
+min() hamesha chhoti value choose karta hai.
+
+Asli use:
+
+Badi screen par element ko bahut bada hone se rokna.
+
+width: min(90%, 800px);
+
+Matlab:
+
+Width 90% rakho, lekin 800px se zyada mat jana.
+
+Kab use karu?
+
+✅ Navbar
+✅ Container
+✅ Card width
+
+Practical Rule:
+
+"Yaar ye bahut bada ho raha hai."
+
+→ min()
+
+2. max()
+Kaam:
+
+max() hamesha badi value choose karta hai.
+
+Asli use:
+
+Element ko bahut chhota hone se rokna.
+
+width: max(250px, 30%);
+
+Matlab:
+
+Width 30% rakho, lekin 250px se chhota mat hona.
+
+Kab use karu?
+
+✅ Minimum card width
+✅ Buttons jo bahut chhote ho rahe hon
+
+Practical Rule:
+
+"Yaar ye bahut chhota ho raha hai."
+
+→ max()
+
+3. clamp()
+
+Syntax:
+
+clamp(minimum, preferred, maximum)
+
+Example:
+
+font-size: clamp(1rem, 3vw, 2rem);
+
+Matlab:
+
+1rem se chhota nahi
+2rem se bada nahi
+Beech me screen ke saath badhta-ghatta rahe
+Kab use karu?
+
+✅ Font-size
+✅ Padding
+✅ Gap
+
+Practical Rule:
+
+"Responsive bhi chahiye aur limits bhi chahiye."
+
+→ clamp()
+
+Width / Height Rule
+Bahut bada ho raha?
+→ min()
+
+Bahut chhota ho raha?
+→ max()
+
+Dono control karne hain?
+→ clamp()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  -->
+# CSS Units Notes (With WHY and WHY NOT)
+
+## 1. px (Pixels)
+
+### Kya hai?
+
+Fixed size.
+
+```css
+width: 300px;
+font-size: 16px;
+```
+
+Matlab:
+
+> Chahe screen chhoti ho ya badi, size same rahega.
+
+### Kyu use karte hain?
+
+Kyuki kuch cheeze fixed hi acchi lagti hain.
+
+### Best Use:
+
+✅ Border radius
+
+```css
+border-radius: 10px;
+```
+
+✅ Shadow
+
+```css
+box-shadow: 0 0 20px black;
+```
+
+✅ Border
+
+```css
+border: 2px solid red;
+```
+
+### Font-size me kyu nahi?
+
+```css
+font-size: 16px;
+```
+
+Agar user browser ki default font size badhaye, to `px` usko respect nahi karta.
+
+`rem` karta hai.
+
+### Width me kyu nahi?
+
+```css
+width: 500px;
+```
+
+Mobile pe toot sakta hai.
+
+---
+
+## 2. % (Percentage)
+
+### Kya hai?
+
+Parent ke relative.
+
+```css
+width: 80%;
+```
+
+Matlab:
+
+> Parent jitna bada hai, uska 80%.
+
+### Kyu use karte hain?
+
+Responsive banane ke liye.
+
+### Best Use:
+
+✅ Width
+
+```css
+width: 80%;
+```
+
+✅ Flex items
+
+### Height me kyu dikkat?
+
+```css
+height: 100%;
+```
+
+Agar parent ki height hi defined nahi hai to kaam nahi karega.
+
+Isliye beginners confuse ho jate hain.
+
+---
+
+## 3. vh / vw
+
+### Kya hai?
+
+Viewport ke relative.
+
+```css
+100vh
+```
+
+= Screen ki 100% height
+
+```css
+100vw
+```
+
+= Screen ki 100% width
+
+### Best Use:
+
+✅ Hero section
+
+```css
+height: 100vh;
+```
+
+### Width me `vh` kyu nahi?
+
+Galat:
+
+```css
+width: 80vh;
+```
+
+`vh` height ke hisaab se calculate hota hai.
+
+Width ko height se kyu control karna? Browser bhi sochta hai ki ye kya ho raha hai.
+
+Use:
+
+```css
+width: 80%;
+```
+
+---
+
+## 4. rem
+
+### Kya hai?
+
+Root (`html`) font size ke relative.
+
+Default:
+
+```css
+1rem = 16px
+```
+
+### Best Use:
+
+✅ Font-size
+
+```css
+font-size: 1rem;
+```
+
+✅ Padding
+
+```css
+padding: 1rem;
+```
+
+✅ Gap
+
+```css
+gap: 1rem;
+```
+
+### Kyu?
+
+Agar user browser me font size bada kare:
+
+```text
+16px → 20px
+```
+
+to sari website proportionally adjust ho sakti hai.
+
+Accessibility better hoti hai.
+
+### px kyu nahi?
+
+`px` fixed hota hai.
+
+`rem` flexible hota hai.
+
+---
+
+## 5. em
+
+### Kya hai?
+
+Parent ke font size ke relative.
+
+Example:
+
+```css
+.parent{
+    font-size: 20px;
+}
+
+.child{
+    font-size: 2em;
+}
+```
+
+Child = 40px
+
+### Problem:
+
+Nested elements me size multiply ho sakta hai.
+
+Beginners ke liye confusing.
+
+### Rule:
+
+```text
+Font-size → rem use karo
+em baad me seekhna
+```
+
+---
+
+# Width/Height Golden Rule
+
+## Width
+
+```css
+width: min(90%, 1200px);
+```
+
+Best:
+
+✅ %
+✅ min()
+✅ clamp()
+
+Avoid:
+
+❌ width: 100vw (kabhi kabhi overflow deta hai)
+
+---
+
+## Height
+
+Normal sections:
+
+```css
+min-height: 100vh;
+```
+
+Best:
+
+✅ vh
+✅ min-height
+
+Avoid:
+
+```css
+height: 500px;
+```
+
+Kyun?
+
+Content badhega to overflow ho sakta hai.
+
+Use:
+
+```css
+min-height: 500px;
+```
+
+---
+
+# Spacing Rule
+
+## Padding
+
+```css
+padding: 1rem;
+```
+
+Best:
+
+✅ rem
+
+Responsive:
+
+```css
+padding: clamp(1rem, 3vw, 2rem);
+```
+
+---
+
+## Gap
+
+```css
+gap: 1rem;
+```
+
+Best:
+
+✅ rem
+
+---
+
+# Border Radius
+
+```css
+border-radius: 10px;
+```
+
+Best:
+
+✅ px
+
+Circle:
+
+```css
+border-radius: 50%;
+```
+
+---
+
+# Shadows
+
+```css
+box-shadow: 0 0 20px black;
+```
+
+Best:
+
+✅ px
+
+---
+
+# Final Cheat Sheet
+
+```text
+Font-size → rem
+Responsive font → clamp()
+
+Width → %, min()
+Height → vh / min-height
+
+Padding → rem
+Gap → rem
+
+Border Radius → px
+Shadow → px
+```
+
+Golden Rule:
+
+> Text ke liye `rem`
+>
+> Layout ke liye `%`
+>
+> Screen ke liye `vh/vw`
+>
+> Fine tuning ke liye `px`

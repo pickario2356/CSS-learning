@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(221, 221, 221);
+}
+.wrapper{
+    height:100vh;
+    background-image:linear-gradient(to right,darkviolet 20%,black );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.navbar{
+    /* width:min(90% ,800px); */
+    width:clamp(100px ,90%,1000px);
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    border:1px solid rgb(240, 146, 255);
+}
+.logo{
+    font-size:1.2rem;
+}
+.nav-list{
+    display: flex;
+    gap:15px;
+    font-size:0.8rem;
+}
+.logo:hover,.nav-list li a:hover{
+    color:rgb(217, 127, 255);
+}
+.dropdown{
+    position: relative;
+}
+.drop-menu{
+    min-width:80px;
+    
+    min-height:100px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    border:1px solid rgb(240, 146, 255);
+    border-radius: 10px;
+    padding:4px;
+    top:calc(100% + 5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px black;
+    visibility: hidden ;
+    opacity: 0;
+    transform:translateY(-5px);
+
+    transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+}
+.dropdown:hover .drop-menu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+.drop-menu li a{
+    font-size: 12px;
+    transition: font-size 0.2s ease;
+}
+.drop-menu li a:hover{
+    font-size: 16px;
+}
