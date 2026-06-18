@@ -1,0 +1,304 @@
+# Hero Section Layout Notes
+
+## Sabse Badi Galti
+
+Pehle design mat socho.
+
+❌ Gradient
+❌ Animation
+❌ Glow
+❌ Shadows
+
+Pehle layout banao.
+
+Layout sahi ho gaya to design baad mein 10 minute mein aa jayega.
+
+---
+
+# Hero Structure
+
+```html
+Hero
+ └── Hero Container
+      ├── Hero Content
+      └── Hero Card / Visual
+```
+
+Example:
+
+```html
+<section class="hero">
+    <div class="hero-container">
+
+        <div class="hero-content">
+            Content
+        </div>
+
+        <div class="hero-card">
+            Card
+        </div>
+
+    </div>
+</section>
+```
+
+---
+
+# Hero
+
+```css
+.hero{
+    min-height:100vh;
+}
+```
+
+### Why?
+
+Hero usually first section hota hai.
+
+`100vh` = poori screen ki height.
+
+---
+
+# Hero Container
+
+```css
+.hero-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+```
+
+### Why?
+
+Content ko control karne ke liye.
+
+Without container:
+
+* Content bahut fail sakta hai.
+* Large screens par ugly lag sakta hai.
+
+Container ka kaam:
+
+"Content ko ek controlled area mein rakhna."
+
+---
+
+# Flex Kahan Lagana Hai?
+
+Flex direct children par kaam karta hai.
+
+Example:
+
+```html
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content"></div>
+        <div class="hero-card"></div>
+    </div>
+</section>
+```
+
+Flex yahan lagega:
+
+```css
+.hero-container{
+    display:flex;
+}
+```
+
+Not:
+
+```css
+.hero{
+    display:flex;
+}
+```
+
+Kyuki hero ke andar sirf ek child hai:
+
+```html
+<div class="hero-container">
+```
+
+---
+
+# Width + Max Width
+
+```css
+width:90%;
+max-width:1200px;
+```
+
+Meaning:
+
+Screen badi hogi → element bada hoga.
+
+Lekin:
+
+```css
+max-width:1200px;
+```
+
+usko ek limit ke baad rok dega.
+
+Shortcut:
+
+```text
+max-width
+=
+"isse zyada bada mat ho"
+```
+
+---
+
+# Min Width
+
+```css
+min-width:300px;
+```
+
+Meaning:
+
+```text
+"300px se chhota mat ho"
+```
+
+Shortcut:
+
+```text
+min-width
+=
+"isse chhota mat ho"
+```
+
+---
+
+# min() Function
+
+```css
+width:min(90%,1200px);
+```
+
+Browser dono values compare karega.
+
+Jo chhoti hogi usko choose karega.
+
+Practical Meaning:
+
+```text
+width + max-width
+```
+
+jaisa behaviour.
+
+Use when:
+
+Element bahut bada ho raha ho.
+
+---
+
+# max() Function
+
+```css
+width:max(90%,300px);
+```
+
+Browser dono compare karega.
+
+Jo badi hogi usko choose karega.
+
+Practical Meaning:
+
+```text
+width + min-width
+```
+
+jaisa behaviour.
+
+Use when:
+
+Element bahut chhota ho raha ho.
+
+---
+
+# Responsive Rule
+
+Desktop:
+
+```text
+[Content]      [Card]
+```
+
+Mobile:
+
+```text
+[Content]
+
+[Card]
+```
+
+Code:
+
+```css
+@media(max-width:768px){
+
+    .hero-container{
+        flex-direction:column;
+    }
+
+}
+```
+
+Ye responsiveness ka sabse common pattern hai.
+
+---
+
+# Jugaad Avoid Karo
+
+Bad:
+
+```css
+position:relative;
+right:-120px;
+```
+
+Good:
+
+```css
+display:flex;
+justify-content:center;
+align-items:center;
+```
+
+Layout problems ko Flex/Grid se solve karo.
+
+Position se dhakka mat maro.
+
+---
+
+# Hero Building Formula
+
+Step 1:
+Hero
+
+Step 2:
+Container
+
+Step 3:
+Content + Visual
+
+Step 4:
+Flex Layout
+
+Step 5:
+Responsive Column
+
+Step 6:
+Styling
+
+Step 7:
+Animation
+
+Animation hamesha last mein.

@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    /* outline: auto; */
+}
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: rgb(31, 0, 36);
+    overflow-x: hidden;
+}
+.hero-container{
+    margin:auto;
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:5vh;
+}
+.hero-h{
+    color: rgb(157, 0, 255);
+    margin:16px 0px;
+}
+.hero-container h1{
+    color: rgb(220, 220, 220);
+    font-size:3rem;
+    margin:24px 0 16px;
+}
+.hero-text{
+    margin: 16px 0 32px;
+    color: rgb(132, 132, 132);
+}
+.hero-btns{
+    display: flex;
+    gap:10px;
+}
+.btn1,.btn2{
+    color: white;
+    padding:12px 22px ;
+    background: linear-gradient(to right,purple ,rgb(0, 136, 255)40%);
+    border-radius: 10px;;
+}
+.btn2{
+    background: transparent;
+    border: 1px solid rgb(92, 92, 92);
+}
+.hero-card{
+    height: 230px;
+    width: 500px;
+    max-width: 500px;
+    background-color:gray ;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255,0.5);
+    box-shadow: 0 0 20px rgb(165, 165, 165);
+}
+.cards{
+    background-color: #1f1f2f ;
+    color: rgb(200, 200, 200);
+    padding: 16px ;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+span{
+    color: rgb(200, 200, 200);
+    
+}
+@media (max-width:768px){
+    .hero-h{
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    .hero-container {
+        text-align: center;
+    }
+    .hero-btns{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-container{
+        flex-direction: column;
+    }
+    .hero-card{
+        /* height: max-content; */
+        max-width: 355px;
+        font-size:0.8rem;
+        padding:10px;
+    }
+    .cards{
+        padding: 14px;
+        margin-bottom:10px ;
+    }
+}
