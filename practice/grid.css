@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.area{
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 90%;
+    max-width: 1200px; 
+    margin:auto; 
+}
+.grid-container{
+    width: 100%;
+    display: grid;
+    gap:1rem;
+    /* grid-template-columns: 200px 200px 200px; */
+    grid-auto-columns: 200px;
+    /* grid-template-rows: 200px 200px 200px; */
+    grid-auto-rows: 200px;
+    grid-auto-flow: column;
+    justify-content: center;
+    /* horizantlly kai liye hight align kni hogi jese row mai fr aur align content */
+}
+.items{
+    padding:20px;
+    background: rgb(229, 229, 229);
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 5px;
+}
