@@ -1,22 +1,22 @@
 
 @font-face {
     font-family:logo;
-    src: url(/Fonts/foundationone/FoundationOne.ttf);}
+    src: url(./Fonts/foundationone/FoundationOne.ttf);}
 @font-face {
     font-family: list ;
-    src: url(/Fonts//quadrillion/Quadrillion\ Sb.otf);
+    src: url(./Fonts//quadrillion/Quadrillion\ Sb.otf);
 }
 @font-face {
     font-family:maqui ;
-    src: url(/Fonts/maqui/Maqui\ Hv.otf);
+    src: url(./Fonts/maqui/Maqui\ Hv.otf);
 }
 @font-face {
     font-family: audex ;
-    src: url(/Fonts/audex/Audex-Regular.otf);
+    src: url(./Fonts/audex/Audex-Regular.otf);
 }
 @font-face {
     font-family:exo ;
-    src: url(/Fonts/exo/Exo-Thin.otf);
+    src: url(./Fonts/exo/Exo-Thin.otf);
 }
 *{
     margin:0;
@@ -31,7 +31,7 @@
     height: 100%;
     width: 100%;
 
-    background-image: url(/images/hero-bg.jpg);
+    background-image: url(./images/hero-bg.jpg);
     background-size: cover;
     background-position: center top ;
     background-repeat: no-repeat;
@@ -264,14 +264,13 @@
 }
 
 .sub-feature{
-    border: 1px solid white;
-    min-height: 500px;
+    min-height: 400px;
     margin: auto;
     background:linear-gradient(to right ,rgb(0, 6, 15), black) ;
     /* overflow: hidden; */
 }
 .sub-content{
-    height: 500px;
+    height: 200px;
     width: min(1100px,80%);
     /* max-width: 100px; */
     margin: auto;
@@ -290,6 +289,7 @@
     margin-bottom: 40px;
     font-family: audex;
     text-align: center;
+    color: rgb(255, 166, 0);
 }
 .feature-btn{
     background-color: rgb(0, 183, 255);
@@ -317,6 +317,12 @@
     height: max-content;
     background:linear-gradient(to right ,rgb(0, 6, 15), black) ; 
 }
+.gallery h1{
+    text-align: center;
+    font-family: logo;
+    color: rgb(255, 166, 0);
+    padding:0 0 30px
+}
 .gallery-container{
     min-height: 100%;
     max-width: 1100px;
@@ -330,12 +336,11 @@
 }
 .grid-item{
     /* background-color: aqua; */
-    border: 1px solid;
+    box-shadow: 0 0 20px rgb(59, 105, 255);
+    border: 1px solid rgb(0, 183, 255);
     height: 300px;
-    /* width: 180px; */
     border-radius: 10px;
     overflow: hidden;
-    /* transform:scale(1); */
     transition: all 0.4s ease 0.1s;
     
 }
@@ -348,8 +353,31 @@
 .grid-item:hover{
     transform:scale(1.2)
 }
-
-
+.why{
+    height: max-content;
+    background:linear-gradient(to right ,rgb(0, 6, 15), black) ;
+    text-align: center; 
+    
+}
+.why-content{
+    
+    margin: auto;
+    max-width: 1200px;
+}
+.why-content h1{
+    padding:100px 0 40px 0;
+    word-spacing:10px;
+    letter-spacing: 4px;
+    font-family: maqui;
+    font-size: 3rem;
+    color: rgb(255, 166, 0);
+}
+.why-content p{
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    font-family: exo;
+    padding:20px;
+}
 
 
 
